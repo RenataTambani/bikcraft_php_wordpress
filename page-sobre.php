@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+//Template Name: Sobre
+get_header();
+?>
+
 
 		<section class="introducao-interna interna_sobre">
 			<div class="container">
@@ -47,4 +51,4 @@
 				</li>
 			</ul>
 		</section>
-		<?php get_footer(); ?>
+<?php get_footer(); ?>

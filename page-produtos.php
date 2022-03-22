@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+//Template Name: Produtos
+get_header();
+?>
+
+
 
 		<section class="introducao-interna interna_produtos">
 			<div class="container">
@@ -97,5 +102,4 @@
 					</ul>
 				</div>
 			</div>
-		</section>
-		<?php get_footer(); ?>
+		</section><?php get_footer(); ?>

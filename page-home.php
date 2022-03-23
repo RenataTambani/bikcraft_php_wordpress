@@ -59,12 +59,10 @@ get_header();
 			<div class="container">
 				<h2 class="subtitulo">Portfólio</h2>
 					<?php include(TEMPLATEPATH . '/inc/clientes-portfolio.php'); ?>
-				<div class="call">
-					<p><?php the_field('chamada_portfolio') ?>conheça mais o nosso portfólio</p>
-					<a href="portfolio" class="btn">Portfólio</a>
-				</div>
+				
 			</div>
 		</section>
+
 		<?php include(TEMPLATEPATH . "/inc/qualidade.php"); ?>
 		<?php endwhile; else: endif; ?>
 <?php get_footer(); ?>

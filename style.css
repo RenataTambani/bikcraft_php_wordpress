@@ -6,9 +6,8 @@ Author URI: http://origamid.com/
 Description: Tema criado para a Bikcraft
 Version: 1.0
 */
-
-@import "css/reset.css";
 @import "css/normalize.css";
+@import "css/reset.css";
 @import "css/grid.css";
 @import "css/sobre.css";
 @import "css/portfolio.css";

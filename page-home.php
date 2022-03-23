@@ -8,10 +8,8 @@ get_header();
 			<div class="container">
 				<h1><?php the_field('titulo_introducao') ?></h1>
 				<blockquote class="quote-externo">
-				<?php the_field('quote_introducao') ?>
-					<p>“não tenha nada em sua casa que você não considere útil ou acredita ser bonito”</p>
-					<?php the_field('citacao_introducao') ?>
-					<cite>WILLIAM MORRIS</cite>
+				<p><?php the_field('quote_introducao') ?></p>
+					<cite><?php the_field('citacao_introducao') ?></cite>
 				</blockquote>
 				<a href="produtos.html" class="btn">Orçamento</a>
 			</div>
@@ -48,7 +46,7 @@ get_header();
 			</ul>
 
 			<div class="call">
-				<p><?php the_field('chamada_produtos') ?>clique aqui e veja os detalhes dos produtos</p>
+				<p><?php the_field('chamada_produtos') ?></p>
 				<a href="produtos" class="btn btn-preto">Produtos</a>
 			</div>
 

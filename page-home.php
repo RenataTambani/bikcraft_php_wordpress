@@ -6,7 +6,7 @@ get_header();
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php
-	$imagem_id = get_field('background_home');
+	$imagem_id = get_field('background_interno');
 	$background_large = wp_get_attachment_image_src($imagem_id, 'large');
 	$background_medium = wp_get_attachment_image_src($imagem_id, 'medium');
 ?>
@@ -24,7 +24,7 @@ get_header();
 }
 </style>
 
-
+	
 		<section class="introducao">
 			<div class="container">
 				<h1><?php the_field('titulo_introducao') ?></h1>

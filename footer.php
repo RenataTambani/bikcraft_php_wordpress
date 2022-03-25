@@ -1,8 +1,17 @@
+<?php $contato = get_page_by_title('contato'); ?>
+		
+<style type="text/css">
+	.quebra {
+    background: url("<?php the_field('background_footer', $contato); ?>") no-repeat center;
+  background-size: cover;
+}
+</style>
+
 
 		<div class="quebra">
 			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
+			<?php the_field('frase_footer', $contato); ?>
+				<cite><?php the_field('autor_footer', $contato); ?></cite>
 			</blockquote>
 		</div>
 
@@ -10,27 +19,23 @@
 			<div class="footer">
 				<div class="container">
 
-					<div class="grid-8 footer_historia">
+					<div class="grid-8 resumo_historia">
 						<h3>Nossa História</h3>
-						<p>Quando iniciamos a Bikcraft queriamos apenas um produto que adoraríamos utilizar. Eramos apaixonados por pedalar e também por fazer as coisas com as nossas próprias mãos. Assim surgiu um sonho na garagem da nossa casa.</p>
+						<?php the_field('footer_historia', $contato); ?>
 					</div>
 
 					<div class="grid-4 footer_contato">
 						<h3>Contato</h3>
 						<ul>
-							<li>- 21 9999-9999</li>
-							<li>- contato@bikcraft.com</li>
-							<li>- Botafago - RJ</li>
+							<li>- <?php the_field('telefone', $contato); ?></li>
+							<li>- <?php the_field('email', $contato); ?></li>
+							<li>- <?php the_field('endereco1', $contato); ?></li>
 						</ul>
 					</div>
 
 					<div class="grid-4 footer_redes">
-						<h3>Contato</h3>
-						<ul>
-							<li><a href="http://facebook.com" target="_blank"><img src="img/redes-sociais/facebook.png" alt="Facebook Bikcraft"></a></li>
-							<li><a href="http://instagram.com" target="_blank"><img src="img/redes-sociais/instagram.png" alt="Instagram Bikcraft"></a></li>
-							<li><a href="http://twitter.com" target="_blank"><img src="img/redes-sociais/twitter.png" alt="Twitter Bikcraft"></a></li>
-						</ul>
+						<h3>Redes Sociais</h3>
+					
 					</div>
 
 				</div>

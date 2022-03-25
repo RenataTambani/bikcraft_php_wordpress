@@ -27,7 +27,7 @@ function origamid_css() {
 	wp_enqueue_style( 'origamid-style' );
 }
 add_action( 'wp_enqueue_scripts', 'origamid_css' );
-
+*/
 // Funções para Limpar o Header
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
@@ -39,7 +39,7 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
-
+/*
 // Habilitar Menus
 add_theme_support('menus');
 
@@ -57,7 +57,7 @@ function my_custom_sizes() {
 add_action('after_setup_theme', 'my_custom_sizes');
 
 // Custom Post Type
-/*
+
 function custom_post_type_produtos() {
 	register_post_type('produtos', array(
 		'label' => 'Produtos',
@@ -90,7 +90,7 @@ function custom_post_type_produtos() {
 	));
 }
 add_action('init', 'custom_post_type_produtos');
-
+/*
 function add_file_types_to_uploads($file_types){
   $new_filetypes = array();
   $new_filetypes['svg'] = 'image/svg+xml';

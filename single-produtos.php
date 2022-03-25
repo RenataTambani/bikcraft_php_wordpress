@@ -1,31 +1,25 @@
 <?php
-//Template Name: Produtos
+//Template Name: Single Produtos
 get_header();
 ?>
 
-
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-<?php include(TEMPLATEPATH . "/inc/introducao.php") ?>
 
 		<section class="container produto_item animar-interno">
 			<div class="grid-11">
-				<img src="img/produtos/bikcraft-passeio-1.jpg" alt="Bikcraft Passeio">
-				<h2>Passeio</h2>
+			<img src="<?php the_field('foto_produto_1'); ?>" alt="Bikcraft">
+				<h2><?php the_title(); ?></h2>
 			</div>
-			<div class="grid-5 produto_icone"><img src="img/produtos/passeio.png" alt="Icone Passeio"></div>
-			<div class="grid-8"><img src="img/produtos/bikcraft-passeio-2.jpg" alt="Bikcraft Passeio"></div>
+			<div class="grid-5 produto_icone">
+			<img src="<?php the_field('icone_produto'); ?>" alt="Icone Passeio">
+		</div>
+			<div class="grid-8"><img src="<?php the_field('foto_produto2'); ?>" alt="Bikcraft Passeio"></div>
 			<div class="grid-8 produto_info">
-				<p>Muito melhor do que passear pela orla a vidros fechados. A Bikcraft Passeio é uma bicicleta que une conforto e praticidade para o seu dia a dia. Você nunca mais vai querer saber de outra.</p>
-				<ul>
-					<li>Conforto</li>
-					<li>Praticidade</li>
-					<li>Design</li>
-					<li>Versatilidade</li>
-				</ul>
+				<?php the_content(); ?>
+			
 			</div>
 		</section>
-
+<!-- 
 		<section class="container produto_item">
 			<div class="grid-11">
 				<img src="img/produtos/bikcraft-esporte-1.jpg" alt="Bikcraft Esporte">
@@ -60,7 +54,7 @@ get_header();
 					<li>Versatilidade</li>
 				</ul>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="orcamento">
 			<div class="container">
@@ -83,8 +77,13 @@ get_header();
 
 					<button id="enviar" name="enviar" type="submit" class="btn">Enviar</button>
 				</form>
-				<?php include(TEMPLATEPATH . "/inc/produtos-orcamento.php"); ?>
 
+				<!-- <?php
+					$contato = get_page_by_title('contato')->ID;
+					$produtos = get_page_by_title('produtos')->ID;
+				?> -->
+
+<?php include(TEMPLATEPATH . "/inc/produtos-orcamento.php"); ?>
 			</div>
 		</section>
 		<?php endwhile; else: endif; ?>
